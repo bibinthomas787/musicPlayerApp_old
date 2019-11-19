@@ -38,54 +38,43 @@ class FirstViewController: UIViewController, UITableViewDelegate,UITableViewData
            return cell
        }
        
+     override func didReceiveMemoryWarning()
+       {
+           super.didReceiveMemoryWarning()
+       }
     
     func gettingSongsName(){
         
-        
-        let folderURL = URL(fileURLWithPath: Bundle.main.resourcePath!)
-        
-        
-        do {
-            
-            let songpath =  try FileManager.default.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
-           
-           
-           
-            for song in songpath  {
-                
-                var mysong = song.absoluteString
+         let folderURL = URL(fileURLWithPath:Bundle.main.resourcePath!)
                
-               
-               
-                
-                if mysong.contains(".mp3")
-                
-                {
-                
-                    let findString  = mysong.components(separatedBy: "/")
-                    
-                    print(findString[findString.count-1])
+               do
+               {
+                   let songPath = try FileManager.default.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
                    
-                    
-                    mysong = mysong.replacingOccurrences(of: "%20", with: " ")
+                   //loop through the found urls
+                   for song in songPath
+                   {
+                       var mySong = song.absoluteString
+                       
+                       if mySong.contains(".mp3")
+                       {
+                           let findString = mySong.components(separatedBy: "/")
+                           mySong = findString[findString.count-1]
+                           mySong = mySong.replacingOccurrences(of: "%20", with: " ")
+                           mySong = mySong.replacingOccurrences(of: ".mp3", with: "")
+                           songs.append(mySong)
+                       }
+                       
+                   }
                    
-                    mysong = mysong.replacingOccurrences(of: ".mp3", with: " ")
-                    
-                    songs.append(mysong)
-                    
-                }
-            }
-            print(songs)
-            myTableView.reloadData()
-            
-        }
+                   myTableView.reloadData()
+               }
+               catch
+               {
+                   print ("ERROR")
+               }
         
-        catch
-        {
-            
-            
-            
-        }
+       
     }
 
 }
