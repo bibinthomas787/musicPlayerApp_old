@@ -14,6 +14,7 @@
 		9B65F260238488B30064F43E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B65F25E238488B30064F43E /* Main.storyboard */; };
 		9B65F262238488B30064F43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B65F261238488B30064F43E /* Assets.xcassets */; };
 		9B65F265238488B30064F43E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B65F263238488B30064F43E /* LaunchScreen.storyboard */; };
+		9B65F26D23848A220064F43E /* songs in Resources */ = {isa = PBXBuildFile; fileRef = 9B65F26C23848A220064F43E /* songs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B65F261238488B30064F43E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B65F264238488B30064F43E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B65F266238488B30064F43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B65F26C23848A220064F43E /* songs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = songs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9B65F261238488B30064F43E /* Assets.xcassets */,
 				9B65F263238488B30064F43E /* LaunchScreen.storyboard */,
 				9B65F266238488B30064F43E /* Info.plist */,
+				9B65F26C23848A220064F43E /* songs */,
 			);
 			path = musicPlayerApp;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 				9B65F265238488B30064F43E /* LaunchScreen.storyboard in Resources */,
 				9B65F262238488B30064F43E /* Assets.xcassets in Resources */,
 				9B65F260238488B30064F43E /* Main.storyboard in Resources */,
+				9B65F26D23848A220064F43E /* songs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
